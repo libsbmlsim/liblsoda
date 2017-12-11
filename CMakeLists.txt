@@ -5,9 +5,14 @@ message(STATUS "Running cmake version ${CMAKE_VERSION}")
 project(liblsoda C CXX)
 
 # cmake modules
+set(CMAKE_MODULE_PATH
+  "${CMAKE_MODULE_PATH}"
+  "${CMAKE_CURRENT_SOURCE_DIR}/cmake"
+  )
 include(CMakeCXXInformation)
 include(CheckCXXCompilerFlag)
 include(cmake/find_libsbml.cmake)
+include(cmake/FindGiNaC.cmake)
 
 # build type
 if(NOT CMAKE_BUILD_TYPE)
