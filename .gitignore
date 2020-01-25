@@ -39,3 +39,6 @@ build_debug/
 # IntelliJ
 .idea/
 cmake-build-*/
+
+# code completion
+compile_commands.json
